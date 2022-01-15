@@ -39,17 +39,17 @@ class WebsocketHandler(tornado.websocket.WebSocketHandler):
     def on_message(self, message):
         print('MSG: {}'.format(message.upper())) #what shows as response to new message from client
         
-        
+        #cv2 stuff here, convert image to base64, goes in message
         self.write_message(message.lower()) #what shows in the HTML
 
 
         boing = "red"
 
-        while(True):
-            if(message.lower() == "red"):
-                boing = "red"
-            elif(message.lower() == "blue"):
-                boing = "blue"
+        # while(True):
+        #     if(message.lower() == "red"):
+        #         boing = "red"
+        #     elif(message.lower() == "blue"):
+        #         boing = "blue"
 
             
         # print("this is " + boing)
